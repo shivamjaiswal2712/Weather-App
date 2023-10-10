@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Jost", sans-serif;
+  }
+  .checkkk{
+      justify-content: space-evenly;
+      display: flex;
+  }
+  .top{
+      text-align:center;
+      font-size: large;
+      color:black;
+  }
+  #theme{
+    border-radius: 50%;
+    cursor: pointer;
+    color: black;
+    background-color:transparent;
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+  }
+ 
+  .content{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: space-around;
+      padding: 10px;
+       margin-top: 75px !important; 
+  }
+  h2.location{
+    margin-top: 25px;
+  }
+  h1.temp{
+    margin-top: 0;
+  }
+  div.inputData{
+    margin-bottom: 20px;
+  }
+  .dark-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    font-family: "Jost", sans-serif;
+    background: 
+    url("https://res.cloudinary.com/practicaldev/image/fetch/s--vqF9LVka--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://images.unsplash.com/photo-1545193544-312983719627%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1650%26q%3D80");
+    /* url("https://free4kwallpapers.com/uploads/originals/2020/07/19/night-city-k-wallpaper.jpg"); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    font-family: "Jost", sans-serif;
+    background: 
+    url("https://i.natgeofe.com/k/49f3dd21-d3b5-476e-a85e-4c5b34651cd1/Denali-mountain_3x2.jpg");
+    /* url("https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&w=600"); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  html {
+    font-size: 100%;
+    height: 100%;
+  }
+  #tipu{
+      margin-top: 25px;
+  }
+  .box {
+    width: 40vw;
+    height: 85vh;
+    border-radius: 2rem;
+    box-shadow:  0 4px 8000px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background:transparent;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    min-width: 20rem;
+    min-height: 35rem;
+    border: 2px dotted black;
+    justify-content: center;
+  }
+  .wave {
+    opacity: 0.3;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    background-color:white;
+    width: 45rem;
+    height: 40rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+  }
+  
+  .wave.-three {
+    animation: drift 7000ms infinite linear;
+    z-index: 2 !important;
+    opacity: 0.2;
+  }
+  
+  .wave.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3 !important;
+  }
+  
+  .box::after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  @keyframes drift {
+    from {
+      transform: rotate(0deg);
+    }
+    from {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .info {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    z-index: 4;
+  }
+  
+  .location {
+    margin-top: -5.5rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 4rem;
+    text-transform: capitalize;
+  }
+  
+  .fa-street-view {
+    animation: rotates 3s linear infinite ease !important;
+  }
+  
+  @keyframes rotates {
+    from {
+      transform: translateX(-0.5rem);
+    }
+    from {
+      transform: translateX(0.5rem);
+    }
+  }
+  
+  #date {
+    text-align: center;
+    margin-top: 0.5rem;
+    color:black !important;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  
+  .temp {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .tempmin_max {
+    text-align: center;
+    margin-top: 0.3rem;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color:black;
+  }
+  
+  #weathercon {
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+  }
+  
+  #weathercon .fas {
+    font-size: 6rem;
+    animation: fas-anime 3s linear infinite alternate !important;
+  }
+  @media only screen and (max-width: 430px) and (max-height:400px){
+    input:focus{
+        position: fixed;
+        top:50px;
+    }
+}
+  @keyframes fas-anime {
+    from {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .box {
+      width: 90vw;
+      height: 80vh;
+    }
+  
+    .wave {
+      top: 85%;
+    }
+  
+    #weathercon {
+      font-size: 5em;
+    }
+  
+    .info {
+      font-size: 1.5em;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .box {
+      height: 80vh;
+    }
+  
+    .wave {
+      top: 115%;
+    }
+  }
+  
+  body > span {
+    width: 100vw;
+    text-align: center;
+    color: grey;
+  }
+  
+  .inputData {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .inputField {
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: 10px;
+    border-radius: 5rem;
+    padding: 1rem 1rem;
+    outline: none;
+    font-size: 1.5rem;
+  }
+  
+  .errorMsg {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+  }
