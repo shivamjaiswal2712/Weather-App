@@ -92,7 +92,7 @@ useEffect(() => {
                         <h1>{sky}</h1>
 
                      
-                      {city.temp_max>28 ?
+                      {city.temp_max>21 ?
                       <><i class="fa fa-clouds-sun"></i>
                       <h2 className="">It is summer season.Wear{clothes[1]} </h2></>
                       :<><i class="fa fa-hat-winter"></i>
