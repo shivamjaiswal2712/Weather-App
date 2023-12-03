@@ -6,6 +6,7 @@
   .checkkk{
       justify-content: space-evenly;
       display: flex;
+      margin-top: 5px;
   }
   .top{
       text-align:center;
@@ -30,7 +31,7 @@
       padding: 10px;
        margin-top: 75px !important; 
   }
-  h2.location{
+  h3.location{
     margin-top: 25px;
   }
   h1.temp{
@@ -243,11 +244,23 @@
   
   @media (max-width: 500px) {
     .box {
-      height: 80vh;
+      height: 70vh;
+      left: 12px;
     }
-  
-    .wave {
+    .season{
+      font-size: larger;
+    }
+    #logo{
+      left: 10px;
+    }
+    .top{
+      width: 70%;
+    }
+  .wave {
       top: 115%;
+    }
+    h2 .location{
+      font-size: small;
     }
   }
   

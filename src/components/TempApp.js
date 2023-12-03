@@ -43,7 +43,7 @@ const TempApp = () => {
   const [sky, setSky] = useState(null);
   const [ico, setIco] = useState(null);
   const [search, setSearch] = useState("");
-  const [clothes, setClothes] = useState(["T-Shirts,Cotton Dresses,Skirts,Caps", "Beanie, Cardigan, Earmuffs,Jacket,Long Coat,Mittens", "It is raining or probably would rain,wear a raincoat or take an umbrella."]);
+  const [clothes, setClothes] = useState(["T-Shirts, Cotton Dresses, Skirts, Caps.", "Beanie, Cardigan, Earmuffs, Jacket, Long Coat, Mittens.", "It is raining or probably would rain,wear a raincoat or take an umbrella."]);
   useEffect(() => {
     axios
       .get(
@@ -55,7 +55,7 @@ const TempApp = () => {
         setSky(response.data.weather[0].description);
         setIco(response.data.weather[0].icon);
       })
-      .catch((error) => {
+      .catch(() => {
         setCity(null);
         // console.log(error);
       });
@@ -64,7 +64,7 @@ const TempApp = () => {
     <>
       <div className="checkkk">
         <div className="top"><h1>WEATHER REPORT</h1> <br /></div>
-        <div><button onClick={changetheme} id="theme"><i class="fa fa-sun"></i></button></div>
+        <div className="logo"><button onClick={changetheme} id="theme"><i class="fa fa-sun"></i></button></div>
       </div>
       <div className="box" id="boxid">
         <div className="inputData">
@@ -75,35 +75,34 @@ const TempApp = () => {
         {!city ? (<p className="errorMsg">Wrong City!! No Data Found</p>) : (
           <div><div className="info">
             <div className="content">
-              <h2 className="location">
+              <h3 className="location">
                 <i className="fas fa-street-view"></i>
                 {search}
-              </h2>
+              </h3>
               <h1 className="temp">
                 {city.temp} °Cel
 
               </h1>
-
-
+              
               <h3 className="tempmin_max">
                 Min : {city.temp_min}°Cel | Max : {city.temp_max}°Cel
               </h3>
 
-              <h1>{sky}</h1>
+              <h3>{sky}</h3>
 
               {city.temp_max >= 18 ?
                 <>{city.temp_max >= 27 ?
                   <><i class="fa fa-clouds-sun"></i>
-                    <h2 className="">It is summer season.Wear{clothes[0]} </h2></>
+                    <h2 className="season">It is summer season.Wear{clothes[0]} </h2></>
                   : <><i class="fa fa-hat-winter"></i>
-                    <h2 className="">It is winter season.Wear{clothes[1]} </h2>
+                    <h2 className="season">It is winter season.Wear{clothes[1]} </h2>
                   </>
                 }</>
                 : <>{city.temp_max < 18 ?
                   <><i class="fa fa-clouds-sun"></i>
-                    <h2 className="">It is cold winter season.Wear{clothes[1]} </h2></>
+                    <h2 className="season">It is cold winter season.Wear{clothes[1]} </h2></>
                   : <><i class="fa fa-hat-winter"></i>
-                    <h2 className="">It is rainy season.Wear{clothes[2]} </h2>
+                    <h2 className="season">It is rainy season.Wear{clothes[2]} </h2>
                   </>
                 }</>
               }
