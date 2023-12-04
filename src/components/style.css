@@ -267,6 +267,9 @@
     .info{
       margin-top: 12px;
     }
+    h2 .tempmin_max{
+      font-size: 20px;
+    }
   }
   
   body > span {
