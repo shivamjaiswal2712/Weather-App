@@ -29,10 +29,10 @@
       text-align: center;
       justify-content: space-around;
       padding: 10px;
-       margin-top: 75px !important; 
+      margin-top: 15px !important; 
   }
   h3.location{
-    margin-top: 25px;
+    margin-top: 0px;
   }
   h1.temp{
     margin-top: 0;
@@ -228,15 +228,12 @@
       width: 90vw;
       height: 80vh;
     }
-  
     .wave {
       top: 85%;
     }
-  
     #weathercon {
       font-size: 5em;
     }
-  
     .info {
       font-size: 1.5em;
     }
@@ -245,7 +242,7 @@
   @media (max-width: 500px) {
     .box {
       height: 70vh;
-      left: 12px;
+      left: 2px;
     }
     .season{
       font-size: larger;
@@ -261,6 +258,14 @@
     }
     h2 .location{
       font-size: small;
+    }
+  }
+  @media (max-width: 1024px){
+    .box{
+      width: 100%;
+    }
+    .info{
+      margin-top: 12px;
     }
   }
   

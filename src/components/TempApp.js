@@ -84,11 +84,11 @@ const TempApp = () => {
 
               </h1>
               
-              <h3 className="tempmin_max">
+              <h2 className="tempmin_max">
                 Min : {city.temp_min}°Cel | Max : {city.temp_max}°Cel
-              </h3>
+              </h2>
 
-              <h3>{sky}</h3>
+              <h2>{sky}</h2>
 
               {city.temp_max >= 18 ?
                 <>{city.temp_max >= 27 ?
